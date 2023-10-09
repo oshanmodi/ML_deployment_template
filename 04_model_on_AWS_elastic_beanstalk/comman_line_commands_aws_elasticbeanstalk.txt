@@ -1,0 +1,60 @@
+ 3596  pipenv install awsebcli --dev
+ 3597  ls -a
+ 3598  cd ..
+ 3599  cd 03_model_as_container
+ 3600  ls -a
+ 3601  cd ../04_model_on_AWS_elastic_beanstalk
+ 3602  cd 03_model_as_container
+ 3603  docker build -t titanic-disaster .
+ 3604  docker run -it --rm -p 9696:9696 titanic-disaster
+ 3605  e
+ 3606  eb
+ 3607  pipenv shell
+ 3608  eb 
+ 3609  eb init
+ 3610  eb init -p --help
+ 3611  eb init --help
+ 3612  eb init -p docker titanic-disaster
+ 3613  ls -a
+ 3614  ls .elasticbeanstalk
+ 3615  less .elasticbeanstalk/config.yml
+ 3616  eb init -p docker -r ap-south-1 titanic-disaster
+ 3617  less .elasticbeanstalk/config.yml
+ 3618  eb local run --port 9696
+ 3619  less .elasticbeanstalk/config.yml
+ 3620  eb local run --port 9696
+ 3621* cd ..
+ 3622* ls
+ 3623* cd 04_model_on_AWS_elastic_beanstalk
+ 3624* ls
+ 3625* docker build -t titanic-disaster .
+ 3626* docker scan
+ 3627* docker scan titanic-scan
+ 3628* docker run -it --rm -p 9696:9696 titanic-disaster
+ 3629  eb local run --port 9696
+ 3630  docker ps
+ 3631  eb local run --port 9696
+ 3632  ls
+ 3633  ls -a
+ 3634  less .elasticbeanstalk/config.yml
+ 3635  eb local run --port 9696 --debug
+ 3636  python --version
+ 3637  eb --version
+ 3638  eb create titanic-disaster-serving-env
+ 3639  which python
+ 3640  python test-app.py
+ 3641  python train.py
+ 3642* cd 04_model_on_AWS_elastic_beanstalk
+ 3643* /usr/bin/env /Users/oshan/.local/share/virtualenvs/03_model_as_container-AHvK5PGF/bin/python /Users/oshan/.vscode/extensions/ms-python.python-2023.18.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher 62821 -- /Users/oshan/GoogleDrives/EEDrive/OshanProjects/20231005_ML_deployment_template/04_model_on_AWS_elastic_beanstalk/train.py 
+ 3644* cd 04_model_on_AWS_elastic_beanstalk
+ 3645* which python
+ 3646* mamba activate base
+ 3647* pipenv shell
+ 3648* python train.py
+ 3649* cd 04_model_on_AWS_elastic_beanstalk
+ 3650* docker build -t titanic-disaster .
+ 3651* docker run -it --rm -p 9696:9696 titanic-disaster
+ 3652  python test-app.py
+ 3653  less .elasticbeanstalk/config.yml
+ 3654  ls
+ 3655  eb local run

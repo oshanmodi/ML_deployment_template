@@ -1,12 +1,6 @@
 import requests
 
 
-# In[2]:
-
-
-# In[3]:
-
-
 passenger1 = {
     "Pclass": 3,
     "Sex": "male",
@@ -17,9 +11,6 @@ passenger1 = {
     "Cabin": "no",
     "Embarked": "S",
 }
-
-
-# In[4]:
 
 
 passenger2 = {
@@ -38,31 +29,16 @@ passenger2 = {
 }
 
 
-# In[5]:
-
-
 # passenger = dftest.iloc[0].to_dict()
 url = "http://0.0.0.0:9696/predict"
-
-
-# In[7]:
-
 
 requests.get(url)
 
 
-# In[8]:
-
-
 response = requests.post(url, json=passenger1)
-response.json()
-
-
-# In[9]:
+print(response.json())
 
 
 response = requests.post(url, json=passenger2)
-response.json()
+print(response.json())
 
-
-# In[ ]:
